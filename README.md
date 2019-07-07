@@ -26,7 +26,7 @@ git clone https://github.com/jordymateo/NumericSystemsConverter.git
 If you don't have git installed go to this [page ](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) for installation step by step.
 
 ### How to use
-Open the command line, and go to the proyect folder where you download it.
+Open the command line, and go to the proyect folder where you downloaded it.
 
 ```
 cd <your-project-path>/NSConverterConsole
@@ -38,21 +38,21 @@ And run it using
 dotnet run
 ```
 
-When the program start, it'll ask you for the file path that will be used to get the needed data.
+When the program starts, it will ask for the file path that will be used to obtain the necessary data.
 
 File format (data.txt): 
 ```
 value | value-numerical-system | result-numerical-system
 ```
 
-Then it'll ask for a *"path + filename.txt"* that will create a new file with the data processed.
+Then it will request a path *"path + filename.txt"* that will create a new file with the data processed.
 
 File format (result.txt): 
 ```
 value | value-numerical-system | result-numerical-system | result
 ```
 
-The numerical systems convertion used will be:
+The convertion of numerical systems used is:
 <small>
 Value|Numerical System
 --- | ---
@@ -71,12 +71,12 @@ a4 | 16 | 2
 ```
 
 2. Run the program
-3. Program ask for data file:
+3. The program request the data file:
 ```
 File path (read data): <path>/dataExample.txt
 ```
 
-4. Program ask for data result file:
+4. The program request the file of data result:
 ```
 File path (write data result): <path>/resultExample.txt
 ```
