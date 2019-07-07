@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NumericSystemsConverter\NumericSystemsConverter.csproj" />
+    <ProjectReference Include="..\NSConverter\NSConverter.csproj" />
   </ItemGroup>
 
 </Project>

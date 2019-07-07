@@ -1,7 +1,7 @@
-﻿using NumericSystemsConverter.DataManager;
+﻿using NSConverter.DataManager;
 using System;
 
-namespace NumericSystemsConverter
+namespace NSConverter
 {
     public class NumericSystems
     {

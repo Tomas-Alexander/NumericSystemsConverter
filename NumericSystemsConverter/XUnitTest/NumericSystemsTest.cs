@@ -1,6 +1,6 @@
 using Moq;
-using NumericSystemsConverter;
-using NumericSystemsConverter.DataManager;
+using NSConverter;
+using NSConverter.DataManager;
 using System;
 using System.Collections.Generic;
 using Xunit;

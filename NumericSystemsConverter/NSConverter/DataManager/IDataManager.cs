@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace NumericSystemsConverter.DataManager
+namespace NSConverter.DataManager
 {
     public interface IDataManager
     {

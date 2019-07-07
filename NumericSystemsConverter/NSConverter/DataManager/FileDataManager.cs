@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace NumericSystemsConverter.DataManager
+namespace NSConverter.DataManager
 {
     public class FileDataManager: IDataManager
     {
@@ -11,28 +11,29 @@ namespace NumericSystemsConverter.DataManager
 
         public IEnumerable<DataStruct> GetData()
         {
-            int index= 0;
-            foreach(var line in System.IO.File.ReadAllLines(EntryFile))
+            int lineNumber= 1;
+            System.IO.File.Delete(OutputFile);
+            foreach (var line in System.IO.File.ReadAllLines(EntryFile))
             {
                 if (!string.IsNullOrWhiteSpace(line))
                 {
                     var columns = line.Split(Separator);
                     var item = new DataStruct
                     {
-                        Value = columns[0],
-                        From = Enum.Parse<NumericSystem>(columns[1]),
-                        To = Enum.Parse<NumericSystem>(columns[2])
+                        Value = columns[0].Trim(),
+                        From = Enum.Parse<NumericSystem>(columns[1].Trim()),
+                        To = Enum.Parse<NumericSystem>(columns[2].Trim())
                     };
 
                     if (!Enum.IsDefined(typeof(NumericSystem), item.From))
-                        throw new ArgumentException($"From: {columns[1]}. at line: {index}");
+                        throw new ArgumentException($"From (Invalid type): {columns[1]}. at line: {lineNumber}");
 
                     if (!Enum.IsDefined(typeof(NumericSystem), item.To))
-                        throw new ArgumentException($"To: {columns[2]}. at line: {index}");
+                        throw new ArgumentException($"To (Invalid type): {columns[2]}. at line: {lineNumber}");
 
-                    index++;
                     yield return item;
                 }
+                lineNumber++;
             }
         }
 
