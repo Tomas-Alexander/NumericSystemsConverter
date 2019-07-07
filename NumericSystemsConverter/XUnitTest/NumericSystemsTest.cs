@@ -9,18 +9,6 @@ namespace XUnitTest
 {
     public class NumericSystemsTest
     {
-        //IDataManager
-        //FileManager
-        //Enum -> NumericSystem
-
-        /* TODO: Investigar Radix
-         Pruebas ->
-            Metodo -> Valor, Unidad de entrada, Unidad de salida
-         Una prueba para cada tipo de conversion
-         Prueba para tipos invalidos -> El tipo de excepcion que generara
-         
-         */
-
         [Fact]
         public void NotFound_Data_Throws_ArgumentNullException()
         {

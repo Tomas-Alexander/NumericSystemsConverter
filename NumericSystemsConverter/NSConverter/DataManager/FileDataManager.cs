@@ -11,6 +11,7 @@ namespace NSConverter.DataManager
 
         public IEnumerable<DataStruct> GetData()
         {
+           
             int lineNumber= 1;
             System.IO.File.Delete(OutputFile);
             foreach (var line in System.IO.File.ReadAllLines(EntryFile))
